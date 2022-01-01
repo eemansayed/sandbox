@@ -31,13 +31,27 @@ body {
 
 .header .nav-item {
   padding-right: 2rem;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .header .nav-item.logo {
   padding: 0 4rem 0 2rem;
   max-width: 350px;
+  min-width: 250px;
 }
 
 .header .nav-item.logo img {
   width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.header .nav-item a {
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.header .nav-item a:hover {
+  color: lightgrey;
 }

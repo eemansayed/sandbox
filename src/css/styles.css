@@ -25,3 +25,51 @@ h1 {
   padding-bottom: 35rem;
   font-size: 20px;
 }
+
+.nav-list {
+  list-style-type: none;
+}
+
+.nav-link-one {
+  text-decoration: none;
+  position: relative;
+  bottom: 45px;
+  right: 300px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.nav-link-two {
+  text-decoration: none;
+  position: relative;
+  bottom: 45px;
+  right: 250px;
+}
+
+.nav-link-three {
+  text-decoration: none;
+  position: relative;
+  bottom: 45px;
+  right: 175px;
+}
+
+.nav-link-four {
+  text-decoration: none;
+  position: relative;
+  bottom: 45px;
+  left: 175px;
+}
+
+.nav-link-five {
+  text-decoration: none;
+  position: relative;
+  bottom: 45px;
+  left: 250px;
+}
+
+.nav-link-six {
+  text-decoration: none;
+  position: relative;
+  bottom: 45px;
+  left: 300px;
+}

@@ -3,10 +3,17 @@
 }
 
 body {
+  background-image: url("images/gradient-background.png");
   justify-content: center;
   align-items: center;
   margin: 0;
   display: flex;
   height: 100vh;
   overflow-x: hidden;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 550px;
+  color: #fff;
 }

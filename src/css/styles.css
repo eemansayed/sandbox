@@ -55,3 +55,14 @@ body {
 .header .nav-item a:hover {
   color: #d3d3d3;
 }
+
+.header .heading {
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-right: 25rem;
+  margin-left: 25rem;
+}

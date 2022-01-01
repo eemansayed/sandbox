@@ -1,1 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+.header {
+  background-image: url("../images/gradient-background.png");
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.header .nav-item {
+  padding-right: 2rem;
+  background-image: url("..images/logo.svg");
+}

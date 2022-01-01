@@ -17,7 +17,11 @@ body {
 h1 {
   font-size: 30px;
   text-align: center;
-  padding-bottom: 550px;
-  z-index: auto;
   font-weight: bold;
+}
+
+.nav {
+  text-align: center;
+  padding-bottom: 35rem;
+  font-size: 20px;
 }

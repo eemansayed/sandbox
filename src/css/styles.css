@@ -76,3 +76,13 @@ body {
   margin-right: 26rem;
   margin-left: 26rem;
 }
+
+.header .btn {
+  padding: 20px 25px 20px 25px;
+  border-radius: 15px;
+  vertical-align: middle;
+  border: none;
+  color: #000;
+  margin-left: 625px;
+  background-color: #fff;
+}

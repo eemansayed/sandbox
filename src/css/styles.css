@@ -66,3 +66,13 @@ body {
   margin-right: 25rem;
   margin-left: 25rem;
 }
+
+.header p {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  bottom: 65px;
+  font-size: 1.5rem;
+  margin-right: 26rem;
+  margin-left: 26rem;
+}

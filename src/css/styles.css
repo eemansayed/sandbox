@@ -5,6 +5,7 @@
 }
 
 body {
+  background: linear-gradient(#e66465, #9198e5);
   font-family: "Urbanist", sans-serif;
   justify-content: center;
   align-items: center;
@@ -15,9 +16,12 @@ body {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
   font-weight: bold;
+  position: relative;
+  color: #fff;
+  top: 10px;
 }
 
 .nav {
@@ -28,6 +32,7 @@ h1 {
 
 .nav-list {
   list-style-type: none;
+  font-weight: bold;
 }
 
 .nav-link-one {
@@ -37,6 +42,31 @@ h1 {
   right: 300px;
   padding-right: 1rem;
   padding-left: 1rem;
+  color: #fff;
+}
+
+.nav-link-one:hover {
+  color: #eaeaea;
+}
+
+.nav-link-two:hover {
+  color: #eaeaea;
+}
+
+.nav-link-three:hover {
+  color: #eaeaea;
+}
+
+.nav-link-four:hover {
+  color: #eaeaea;
+}
+
+.nav-link-five:hover {
+  color: #eaeaea;
+}
+
+.nav-link-six:hover {
+  color: #eaeaea;
 }
 
 .nav-link-two {
@@ -44,6 +74,7 @@ h1 {
   position: relative;
   bottom: 45px;
   right: 250px;
+  color: #fff;
 }
 
 .nav-link-three {
@@ -51,13 +82,15 @@ h1 {
   position: relative;
   bottom: 45px;
   right: 175px;
+  color: #fff;
 }
 
 .nav-link-four {
   text-decoration: none;
   position: relative;
   bottom: 45px;
-  left: 175px;
+  left: 155px;
+  color: #fff;
 }
 
 .nav-link-five {
@@ -65,6 +98,7 @@ h1 {
   position: relative;
   bottom: 45px;
   left: 250px;
+  color: #fff;
 }
 
 .nav-link-six {
@@ -72,4 +106,5 @@ h1 {
   position: relative;
   bottom: 45px;
   left: 300px;
+  color: #fff;
 }

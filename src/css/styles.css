@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-image: url("images/gradient-background.png");
+  font-family: "Urbanist", sans-serif;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -13,7 +15,9 @@ body {
 }
 
 h1 {
+  font-size: 30px;
   text-align: center;
   padding-bottom: 550px;
-  color: #fff;
+  z-index: auto;
+  font-weight: bold;
 }

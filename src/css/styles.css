@@ -19,10 +19,17 @@ body {
 }
 
 .header {
+  position: relative;
   background-image: url("../images/gradient-background.png");
   background-size: cover;
   background-position: center;
   padding-bottom: 4rem;
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
 }
 
 .nav-menu {

@@ -111,3 +111,12 @@ body {
   outline: none;
   transform: translateY(-3px);
 }
+
+@media (max-width: 1000px) {
+  .header .nav-item {
+    display: none;
+  }
+  .header .nav-item.logo {
+    display: block;
+  }
+}

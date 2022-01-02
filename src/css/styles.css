@@ -83,8 +83,9 @@ svg {
   position: relative;
   bottom: 65px;
   font-size: 1.5rem;
-  margin-right: 26rem;
-  margin-left: 26rem;
+  margin-right: 28rem;
+  margin-left: 28rem;
+  font-weight: bold;
 }
 
 .header .btn {

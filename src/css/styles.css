@@ -24,6 +24,7 @@ body {
   background-size: cover;
   background-position: center;
   padding-bottom: 4rem;
+  overflow: hidden;
 }
 
 svg {
@@ -67,40 +68,41 @@ svg {
 }
 
 .header .heading {
-  color: white;
+  color: #fff;
   padding-top: 60px;
   padding-bottom: 100px;
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
-  margin-right: 25rem;
-  margin-left: 25rem;
+  max-width: 33%;
+  margin: auto;
 }
 
 .header p {
   text-align: center;
   color: #fff;
-  position: relative;
-  bottom: 65px;
   font-size: 1.5rem;
-  margin-right: 28rem;
-  margin-left: 28rem;
   font-weight: bold;
+  max-width: 33%;
+  margin: auto;
+  margin-bottom: 2rem;
 }
 
 .header .btn {
-  padding: 17px 22px 17px 22px;
+  background-color: #fff;
   border-radius: 10px;
   border: none;
   color: #343f52;
-  margin-left: 625px;
-  background-color: #fff;
+  cursor: pointer;
+  display: block;
   font-size: 1rem;
   font-family: inherit;
-  cursor: pointer;
+  margin: auto;
+  padding: 17px 22px 17px 22px;
   transition: all 0.2s ease-in-out;
 }
 
 .header .btn:hover {
+  outline: none;
   transform: translateY(-3px);
 }

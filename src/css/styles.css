@@ -32,6 +32,26 @@ body {
   left: 0;
 }
 
+.off-canvas .fa-times {
+  padding: 0 0;
+  background-color: 0 0;
+  border: 0;
+  line-height: 1;
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  margin: 0;
+  border-radius: 0;
+  font-size: 20px;
+  color: #d3d3d3;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.off-canvas .fa-times:hover {
+  color: #fff;
+}
+
 .off-canvas img {
   max-width: 75%;
   padding: 3rem 0 2rem;
@@ -52,6 +72,7 @@ body {
   padding-bottom: 0.7rem;
   display: block;
   font-weight: bold;
+  transition: color 0.2s ease-in-out;
 }
 
 .off-canvas .nav-item a:hover {

@@ -241,6 +241,17 @@ body {
     padding-left: 2rem;
   }
 }
+@media (min-width: 1000px) {
+  .header .toggle {
+    display: none !important;
+  }
+  .header .toggle-cross {
+    display: none !important;
+  }
+  .off-canvas {
+    transform: translateX(-100%) !important;
+  }
+}
 
 @media (max-width: 556px) {
   .header .nav-item.logo {

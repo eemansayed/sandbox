@@ -37,6 +37,27 @@ body {
   padding: 3rem 0 2rem;
 }
 
+.nav-list-sidebar {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  margin-top: 0;
+}
+
+.off-canvas .nav-item a {
+  color: #fff;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  display: block;
+  font-weight: bold;
+}
+
+.off-canvas .nav-item a:hover {
+  color: #d3d3d3;
+}
+
 .header {
   position: relative;
   background-image: url("../images/gradient-background.png");

@@ -30,6 +30,8 @@ body {
   background: #1e2228;
   z-index: 1;
   left: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease-in-out;
 }
 
 .off-canvas .fa-times {

@@ -1,7 +1,6 @@
 const toggle = document.querySelector(".toggle");
 const toggleCross = document.querySelector(".toggle-cross");
 const offCanvas = document.querySelector(".off-canvas");
-const faTimes = document.querySelector(".fa-times");
 
 const toggleClickListener = (e) => {
   toggle.style.display = "none";

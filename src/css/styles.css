@@ -230,6 +230,12 @@ body {
   }
 }
 
+@media (min-width: 1000px) {
+  .off-canvas {
+    display: none;
+  }
+}
+
 @media (max-width: 556px) {
   .header .nav-item.logo {
     max-width: 200px;

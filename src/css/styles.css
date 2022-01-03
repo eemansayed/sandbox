@@ -27,6 +27,24 @@ body {
   overflow: hidden;
 }
 
+.header .navbar-collapse {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 18rem;
+  padding-right: 0;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  overflow-y: auto;
+  background: #1e2228;
+  transition: left 0.3s ease-in-out;
+  z-index: 1041;
+  background-clip: padding-box;
+  left: 0;
+  visibility: visible;
+}
+
 .header .curve {
   position: absolute;
   fill: #fff;

@@ -212,6 +212,10 @@ body {
   margin: 0 0 5px;
 }
 
+.header .togglex {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .header .toggle {
     display: block;
@@ -227,12 +231,6 @@ body {
     justify-content: space-between;
     padding-right: 2rem;
     padding-left: 2rem;
-  }
-}
-
-@media (min-width: 1000px) {
-  .off-canvas {
-    display: none;
   }
 }
 

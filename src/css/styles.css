@@ -23,13 +23,18 @@ body {
   top: 0;
   bottom: 0;
   right: 100%;
-  width: 18rem;
+  width: 19rem;
   padding-right: 0;
   padding-left: 1.5rem;
   padding-bottom: 0.5rem;
   background: #1e2228;
   z-index: 1;
   left: 0;
+}
+
+.off-canvas img {
+  max-width: 75%;
+  padding: 3rem 0 2rem;
 }
 
 .header {

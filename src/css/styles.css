@@ -214,8 +214,14 @@ body {
   margin: 0 0 5px;
 }
 
-.header .togglex {
+.header .toggle-cross {
+  background-color: transparent;
+  border: none;
   display: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 35px;
+  font-weight: 500;
 }
 
 @media (max-width: 1000px) {

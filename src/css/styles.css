@@ -258,6 +258,13 @@ body {
   fill: #f8d2e8;
 }
 
+.cards h4 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #343f52;
+}
+
 @media (max-width: 1500px) {
   .header .heading,
   .header p {

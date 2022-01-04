@@ -239,6 +239,7 @@ body {
 
 .cards-section {
   display: flex;
+  gap: 25px;
 }
 
 .cards {
@@ -261,6 +262,48 @@ body {
 
 .cards .icon .fill-secondary {
   fill: #f8d2e8;
+}
+
+.cards .social-icon {
+  width: 44px;
+  height: 44px;
+  margin: 15px;
+}
+
+.cards .social-icon .fill-primary {
+  fill: #a07cc5;
+}
+
+.cards .social-icon .fill-secondary {
+  fill: #e3d8ee;
+}
+
+.cards .bulb-icon {
+  width: 44px;
+  height: 44px;
+  margin: 15px;
+}
+
+.cards .bulb-icon .fill-primary {
+  fill: #f78b77;
+}
+
+.cards .bulb-icon .fill-secondary {
+  fill: #fddcd6;
+}
+
+.cards .box-icon {
+  width: 44px;
+  height: 44px;
+  margin: 15px;
+}
+
+.cards .box-icon .fill-primary {
+  fill: #45c4a0;
+}
+
+.cards .box-icon .fill-secondary {
+  fill: #c7ede3;
 }
 
 .cards h4 {
@@ -287,6 +330,27 @@ body {
 .cards a .right-arrow {
   font-size: 13px;
   margin-left: 5px;
+}
+
+.cards .purple-link {
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: #a07cc5;
+}
+
+.cards .orange-link {
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: #f78b77;
+}
+
+.cards .green-link {
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: #45c4a0;
 }
 
 @media (max-width: 1500px) {

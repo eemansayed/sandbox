@@ -16,22 +16,22 @@
 
 body {
   font-family: "Urbanist", sans-serif;
+  position: relative;
 }
 
 .off-canvas {
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
   bottom: 0;
-  right: 100%;
-  width: 19rem;
-  padding-right: 0;
+  width: 260px;
   padding-left: 1.5rem;
   padding-bottom: 0.5rem;
   background: #1e2228;
   z-index: 1;
-  left: 0;
   transform: translateX(-100%);
   transition: transform 1s ease-in-out;
+  overflow-y: auto;
 }
 
 .off-canvas .fa-times {
@@ -86,7 +86,7 @@ body {
   background-image: url("../images/gradient-background.png");
   background-size: cover;
   background-position: center;
-  padding-bottom: 4rem;
+  padding-bottom: 300px;
   overflow: hidden;
 }
 
@@ -230,7 +230,19 @@ body {
   font-size: 50px;
 }
 
+@media (max-width: 1500px) {
+  .header .heading,
+  .header p {
+    max-width: 60%;
+  }
+}
+
 @media (max-width: 1000px) {
+  .header .heading,
+  .header p {
+    max-width: 80%;
+  }
+
   .header .toggle.visible {
     display: block;
   }
@@ -257,7 +269,23 @@ body {
   }
 }
 
-@media (max-width: 556px) {
+@media (max-width: 640px) {
+  .header .heading {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 2rem;
+    max-width: 90%;
+  }
+
+  .header p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    max-width: 90%;
+  }
+  .header .btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
   .header .nav-item.logo {
     max-width: 200px;
     min-width: 100px;

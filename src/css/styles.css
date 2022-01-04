@@ -230,6 +230,11 @@ body {
   font-size: 50px;
 }
 
+.container {
+  position: relative;
+  max-width: 1110px;
+}
+
 @media (max-width: 1500px) {
   .header .heading,
   .header p {

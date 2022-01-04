@@ -237,6 +237,10 @@ body {
   top: -160px;
 }
 
+.cards-section {
+  display: flex;
+}
+
 .cards {
   background-color: #fff;
   max-width: 25%;

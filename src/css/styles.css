@@ -233,6 +233,29 @@ body {
 .container {
   position: relative;
   max-width: 1110px;
+  margin: auto;
+}
+
+.cards {
+  background-color: #fff;
+  max-width: 25%;
+  padding: 40px;
+  box-shadow: 0 0.25rem 1.75rem rgba(30, 34, 40, 0.07);
+  border-radius: 6px;
+}
+
+.cards .icon {
+  width: 44px;
+  height: 44px;
+  margin: 15px;
+}
+
+.cards .icon .fill-primary {
+  fill: #e668b3;
+}
+
+.cards .icon .fill-secondary {
+  fill: #f8d2e8;
 }
 
 @media (max-width: 1500px) {

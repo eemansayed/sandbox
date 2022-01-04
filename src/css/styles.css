@@ -259,10 +259,17 @@ body {
 }
 
 .cards h4 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: #343f52;
+}
+
+.cards p {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  color: #60697b;
+  font-size: 1rem;
 }
 
 @media (max-width: 1500px) {

@@ -1,10 +1,3 @@
-/*
- * add hover effect
- * change color
- * add padding top and bottom
- * add transition
- * */
-
 @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
 
 * {
@@ -315,6 +308,7 @@ body {
 .learn-more.green {
   color: #45c4a0;
 }
+
 .second-cards-section {
   margin-top: 100px;
   width: 100%;
@@ -323,6 +317,7 @@ body {
   gap: 25px;
 }
 
+/*the section header*/
 .second-cards-section .text {
   width: 100%;
   text-align: center;
@@ -355,6 +350,7 @@ body {
   background-position-y: 100%;
 }
 
+/*svg fill colors to be inlined*/
 .pink-people-icon .fill-primary {
   fill: #e668b3;
 }
@@ -364,12 +360,11 @@ body {
 }
 
 .second-cards-section .card {
-  display: flex;
   align-items: start;
   flex: 1 1 30%;
+  display: flex;
   box-shadow: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .second-cards-section .card.first {
@@ -428,6 +423,12 @@ body {
   }
   .card {
     width: calc(50% - 25px);
+  }
+}
+
+@media (max-width: 992px) {
+  .second-cards-section .card {
+    flex: 1 1 100%;
   }
 }
 

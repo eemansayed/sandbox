@@ -349,6 +349,12 @@ body {
   color: #343f52;
 }
 
+.second-cards-section .reasons .underline {
+  background-image: url("../images/underline.svg");
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+}
+
 .pink-people-icon .fill-primary {
   fill: #e668b3;
 }

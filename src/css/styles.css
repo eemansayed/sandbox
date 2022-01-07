@@ -491,6 +491,10 @@ body {
   .second-cards-section .card {
     flex: 1 1 100%;
   }
+
+  .reasons-section .reason {
+    flex: 1 1 100%;
+  }
 }
 
 @media (max-width: 768px) {

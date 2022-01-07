@@ -445,9 +445,6 @@ body {
   transform: translateY(-3px);
 }
 
-.pros-section .container {
-  position: static;
-}
 .pros-section {
   display: flex;
   flex-wrap: wrap;
@@ -456,11 +453,21 @@ body {
   padding-top: 7rem;
 }
 
-.pros-section .heading {
+.pros-section .container {
+  position: static;
+  display: flex;
+}
+
+.pros-section .container > div {
+  flex: 1 1 40%;
+  gap: 40px;
+}
+
+.pros-section .container .heading {
   text-align: left;
 }
 
-.pros-section .small-heading {
+.pros-section .container .small-heading {
   letter-spacing: 0.02rem;
   font-size: 0.8rem;
   color: #aab0bc;
@@ -471,7 +478,7 @@ body {
   margin-top: 0;
 }
 
-.pros-section .big-heading {
+.pros-section .container .big-heading {
   line-height: 1.2;
   font-weight: 600;
   margin-bottom: 0;
@@ -485,6 +492,19 @@ body {
   background-image: url("../images/underline.svg");
   background-repeat: no-repeat;
   background-position-y: 100%;
+}
+
+.pros-section .container .semi-circles svg {
+  width: 170px;
+  height: 85px;
+}
+.pros-section .container .semi-circles svg path:nth-of-type(2) {
+  stroke-dashoffset: calc(1 * 147.675px);
+}
+.pros-section .container .semi-circles .progress {
+  transition: stroke-dashoffset 1s linear;
+  stroke: pink;
+  stroke-dashoffset: calc(0.05 * 147.675px) !important;
 }
 
 @media (max-width: 1500px) {

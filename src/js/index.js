@@ -18,7 +18,7 @@ elements.forEach((element) =>
 
 const visibilityChangeHandler = () => {
   const element = document.querySelector(".semi-circles");
-  const progress = document.querySelectorAll(
+  const progresses = document.querySelectorAll(
     ".pros-section .container .semi-circles svg"
   );
 
@@ -39,13 +39,16 @@ const visibilityChangeHandler = () => {
   let isVisible = isElementInView(element);
   if (isVisible != wasVisible) {
     wasVisible = isVisible;
-    progress.forEach((el) => {
-      el.querySelectorAll("path")[1].classList.remove("progress");
-      setTimeout(
-        () => el.querySelectorAll("path")[1].classList.add("progress"),
-        1
-      );
-    });
+    console.log(progresses);
+    const progressPink = progresses[0].children[1].classList;
+    const progressOrange = progresses[1].children[1].classList;
+    progressPink.remove("progress-pink");
+    progressOrange.remove("progress-orange");
+    const addProgressClasses = () => {
+      progressPink.add("progress-pink");
+      progressOrange.add("progress-orange");
+    };
+    setTimeout(addProgressClasses, 1);
   }
 };
 

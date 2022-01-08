@@ -458,8 +458,9 @@ body {
   display: flex;
 }
 
-.pros-section .container > div {
-  flex: 1 1 40%;
+.pros-section .semi-circles {
+  flex: 1 0 40%;
+  display: flex;
   gap: 40px;
 }
 
@@ -494,17 +495,44 @@ body {
   background-position-y: 100%;
 }
 
-.pros-section .container .semi-circles svg {
-  width: 170px;
-  height: 85px;
-}
 .pros-section .container .semi-circles svg path:nth-of-type(2) {
   stroke-dashoffset: calc(1 * 147.675px);
 }
-.pros-section .container .semi-circles .progress {
+.pros-section .container .semi-circles .progress-pink {
   transition: stroke-dashoffset 1s linear;
-  stroke: pink;
+  stroke: #e668b3;
   stroke-dashoffset: calc(0.05 * 147.675px) !important;
+}
+
+.pros-section .container .semi-circles .progress-orange {
+  transition: stroke-dashoffset 1s linear;
+  stroke: #f78b77;
+  stroke-dashoffset: calc(0.2 * 147.675px) !important;
+}
+.pros-section .container .progressbar-num {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  font-size: 2rem;
+  color: #343f52;
+}
+.pros-section .semi-circles .semi-circle {
+  flex: 1 0 40%;
+  width: 8.5rem;
+  height: 4.25rem;
+  position: relative;
+}
+
+.pros-section .container .progressbar-num::after {
+  content: "%";
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+.semi-circle .caption {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #343f52;
 }
 
 @media (max-width: 1500px) {

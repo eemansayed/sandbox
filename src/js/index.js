@@ -16,6 +16,22 @@ elements.forEach((element) =>
   element.addEventListener("click", toggleVisibility)
 );
 
+// select the elements
+// create an increment function
+// setinterval and pass the above function
+// setTimeout after a certain periond to cancel the interval
+// wrap all of the above inside a function
+
+const counters = document.querySelectorAll(".progressbar-num");
+
+let count = 0;
+
+let max = 95;
+// I want to increase the count by one until it reaches 95.
+function incrementor() {
+  count++;
+}
+
 const visibilityChangeHandler = () => {
   const element = document.querySelector(".semi-circles");
   const progresses = document.querySelectorAll(

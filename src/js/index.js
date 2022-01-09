@@ -16,21 +16,18 @@ elements.forEach((element) =>
   element.addEventListener("click", toggleVisibility)
 );
 
-// select the elements
-// create an increment function
-// setinterval and pass the above function
-// setTimeout after a certain periond to cancel the interval
-// wrap all of the above inside a function
+const progressAnimateIncrement = () => {
+  const counters = document.querySelectorAll(".progressbar-num");
+  counters.forEach((counter) => (counter.innerHTML = 0));
+  const intervalId = setInterval(() => {
+    let count = +counters[0].innerHTML;
+    if (count < 95) counters[0].innerHTML = count + 1;
+    else clearInterval(intervalId);
 
-const counters = document.querySelectorAll(".progressbar-num");
-
-let count = 0;
-
-let max = 95;
-// I want to increase the count by one until it reaches 95.
-function incrementor() {
-  count++;
-}
+    count = +counters[1].innerHTML;
+    if (count < 80) counters[1].innerHTML = count + 1;
+  }, 30);
+};
 
 const visibilityChangeHandler = () => {
   const element = document.querySelector(".semi-circles");
@@ -55,7 +52,6 @@ const visibilityChangeHandler = () => {
   let isVisible = isElementInView(element);
   if (isVisible != wasVisible) {
     wasVisible = isVisible;
-    console.log(progresses);
     const progressPink = progresses[0].children[1].classList;
     const progressOrange = progresses[1].children[1].classList;
     progressPink.remove("progress-pink");
@@ -65,6 +61,7 @@ const visibilityChangeHandler = () => {
       progressOrange.add("progress-orange");
     };
     setTimeout(addProgressClasses, 1);
+    progressAnimateIncrement();
   }
 };
 

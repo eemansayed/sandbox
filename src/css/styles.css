@@ -226,12 +226,13 @@ body {
   background-color: transparent;
   font-size: 50px;
 }
-
+.header .container {
+  top: -160px;
+}
 .container {
   position: relative;
   max-width: 73%;
   margin: auto;
-  top: -160px;
 }
 
 .cards-section {
@@ -534,6 +535,41 @@ body {
   text-align: center;
   font-size: 1.1rem;
   color: #343f52;
+}
+
+.section-testimonials .container {
+  display: flex;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.25rem 1.75rem rgba(30, 34, 40, 0.07);
+  overflow: hidden;
+}
+
+.section-testimonials .container .testimonial-item {
+  flex: 1 1 40%;
+}
+
+.section-testimonials .container .testimonial-item img {
+  width: 100%;
+}
+
+.section-testimonials .container .testimonial-item .testimonials .testimonial {
+  text-align: center;
+  padding-top: 150px;
+}
+
+.section-testimonials
+  .container
+  .testimonial-item
+  .testimonials
+  .testimonial
+  .quote {
+  padding-top: 25px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 500;
+  color: #60697b;
+  padding-left: 90px;
+  padding-right: 90px;
 }
 
 @media (max-width: 1500px) {

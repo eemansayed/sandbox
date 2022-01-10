@@ -456,6 +456,7 @@ body {
 .pros-section .container {
   position: static;
   display: flex;
+  padding-bottom: 50px;
 }
 
 .pros-section .semi-circles {
@@ -583,6 +584,10 @@ body {
   }
 
   .reasons-section .reason {
+    flex: 1 1 100%;
+  }
+
+  .pros-section .container {
     flex: 1 1 100%;
   }
 }

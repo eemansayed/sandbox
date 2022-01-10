@@ -456,7 +456,7 @@ body {
 .pros-section .container {
   position: static;
   display: flex;
-  padding-bottom: 50px;
+  padding-bottom: 300px;
 }
 
 .pros-section .semi-circles {
@@ -534,6 +534,38 @@ body {
   text-align: center;
   font-size: 1.1rem;
   color: #343f52;
+}
+
+.section-team .container {
+  position: static;
+  display: flex;
+}
+
+.section-team .container .card-big {
+  border: 0;
+  position: relative;
+  margin-top: -17.5rem;
+  box-shadow: 0 0.25rem 1.75rem rgba(30, 34, 40, 0.07);
+  background-color: #fff;
+  width: 1110px;
+  height: 514.65px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.4rem;
+  top: 100px;
+}
+
+.section-team .container .card-big .image-meeting {
+  background-image: url("../images/meeting.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  border-bottom-left-radius: 0.4rem !important;
+  border-top-left-radius: 0.4rem !important;
+  border-top-right-radius: 0 !important;
+  width: 555px;
+  height: 514.65px;
 }
 
 @media (max-width: 1500px) {

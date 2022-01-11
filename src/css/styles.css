@@ -552,7 +552,9 @@ body {
 }
 
 .section-testimonials .container .testimonial-item img {
+  position: relative;
   width: 100%;
+  z-index: 1000;
 }
 
 .section-testimonials .testimonial-item.content {
@@ -564,10 +566,6 @@ body {
   justify-content: center;
 }
 
-.section-testimonials .testimonial-item ul li {
-  list-style-type: none;
-}
-
 .section-testimonials .testimonial .quote {
   margin-top: 25px;
   font-size: 1.1rem;
@@ -576,6 +574,61 @@ body {
   color: #60697b;
 }
 
+.section-testimonials .testimonial .title {
+  margin-top: 25px;
+  color: #343f52;
+  font-size: 1.1rem;
+}
+
+.section-testimonials .testimonial .profession {
+  margin-top: 12px;
+  color: #60697b;
+}
+
+.section-testimonials .testimonial-item .buttons {
+  margin-top: 40px;
+}
+
+.section-testimonials .testimonial-item button {
+  background-color: transparent;
+  border: 1px solid grey;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.section-testimonials .testimonial-item button:hover,
+.section-testimonials .testimonial-item button.active {
+  width: 10px;
+  height: 10px;
+}
+
+.section-testimonials .outer {
+  width: 100%;
+  height: 100%;
+}
+.section-testimonials .testimonials {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.section-testimonials .testimonial {
+  position: absolute;
+  opacity: 0;
+  transition: transform 1s linear;
+}
+.section-testimonials .testimonial.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.section-testimonials .testimonial.prev {
+  transform: translateX(-100%);
+}
+
+.section-testimonials .testimonial.next {
+  transform: translateX(100%);
+}
 @media (max-width: 1500px) {
   .header .heading,
   .header p {

@@ -564,7 +564,12 @@ body {
   justify-content: center;
 }
 
+.section-testimonials .testimonial-item ul li {
+  list-style-type: none;
+}
+
 .section-testimonials .testimonial .quote {
+  margin-top: 25px;
   font-size: 1.1rem;
   line-height: 1.7;
   font-weight: 500;

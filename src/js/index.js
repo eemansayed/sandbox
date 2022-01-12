@@ -5,77 +5,30 @@ const offCanvasCloseButton = document.querySelector(".off-canvas-close");
 const buttons = document.querySelectorAll(".buttons>button");
 let lastClickedButton;
 
-const items = document.querySelectorAll(".testimonial");
-const inner = document.querySelector(".testimonials");
-const itemsCount = items.length;
+const slides = document.querySelectorAll(".testimonial");
 
-let currentItemIndex = 0;
-let prevItemIndex = itemsCount - 1;
-let nextItemIndex = 1;
+function move(slide, slideIndex, buttonIndex) {
+  slide.style.transform = `translateX(${(slideIndex - buttonIndex) * 100}%)`;
+}
 
-let isMoving = false;
-
-const next = () => {
-  inner.querySelector(".prev").classList.remove("prev");
-  inner.querySelector(".next").classList.remove("next");
-  const lastActive = inner.querySelector(".active").classList;
-
-  prevItemIndex = currentItemIndex;
-  currentItemIndex = nextItemIndex;
-  nextItemIndex = currentItemIndex + 1 >= itemsCount ? 0 : currentItemIndex + 1;
-
-  items[prevItemIndex].classList.add("prev");
-  items[currentItemIndex].classList.add("active");
-  items[nextItemIndex].classList.toggle("next");
-  setTimeout(() => {
-    lastActive.remove("active");
-    isMoving = false;
-  }, 1000);
-};
-const prev = () => {
-  inner.querySelector(".prev").classList.remove("prev");
-  inner.querySelector(".next").classList.remove("next");
-  const lastActive = inner.querySelector(".active").classList;
-
-  nextItemIndex = currentItemIndex;
-  currentItemIndex = prevItemIndex;
-  prevItemIndex =
-    currentItemIndex - 1 < 0 ? itemsCount - 1 : currentItemIndex - 1;
-
-  items[prevItemIndex].classList.add("prev");
-  items[currentItemIndex].classList.add("active");
-  items[nextItemIndex].classList.toggle("next");
-  setTimeout(() => {
-    lastActive.remove("active");
-    isMoving = false;
-  }, 1000);
+const slideButtonClickHandler = (event) => {
+  const button = event.target;
+  if (lastClickedButton) lastClickedButton.classList.remove("active");
+  button.classList.add("active");
+  lastClickedButton = button;
+  slides.forEach((slide, slideIndex) =>
+    move(slide, slideIndex, button.buttonIndex)
+  );
 };
 
-document.addEventListener("keydown", (e) => {
-  if (!isMoving) {
-    if (e.keyCode == "37") {
-      isMoving = true;
-      prev();
-    } else if (e.keyCode == "39") {
-      isMoving = true;
-      next();
-    }
-  }
+const activeSlideButton = buttons[1];
+activeSlideButton.buttonIndex = 1;
+slideButtonClickHandler({ target: activeSlideButton });
+
+buttons.forEach((button, buttonIndex) => {
+  button.buttonIndex = buttonIndex;
+  button.addEventListener("click", slideButtonClickHandler);
 });
-
-buttons.forEach(buttonLoopListener);
-
-function clickListener(event) {
-  if (lastClickedButton) {
-    lastClickedButton.classList.remove("active");
-  }
-  event.target.classList.add("active");
-  lastClickedButton = event.target;
-}
-
-function buttonLoopListener(button) {
-  button.addEventListener("click", clickListener);
-}
 
 const elements = [toggle, toggleCross, offCanvas];
 

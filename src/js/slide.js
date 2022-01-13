@@ -1,5 +1,6 @@
-const buttons = document.querySelectorAll(".btn");
-const slides = document.querySelectorAll(".item");
+const buttons = document.querySelectorAll(".buttons button");
+const slides = document.querySelectorAll(".testimonial");
+let lastClickedButton = buttons[1];
 let lastSlide = 0;
 let dragDelta = 0;
 let isMoving;
@@ -20,31 +21,11 @@ function getNextSlide() {
 function moveNextSlide() {
   const next = getNextSlide();
   lastSlide = next;
+  setActiveButton(lastSlide);
   slides.forEach((slide, slideIndex) => move(slide, (slideIndex - next) * 100));
 }
 
-function removeMouseMoveListener(e) {
-  if (isMoving) {
-    moveNextSlide();
-    isMoving = false;
-  }
-  e.target.removeEventListener("mousemove", mouseMoveListener);
-}
-
-function getSlideButtonListener(buttonIndex) {
-  return () => {
-    lastSlide = buttonIndex;
-    slides.forEach((slide, slideIndex) =>
-      move(slide, (slideIndex - buttonIndex) * 100)
-    );
-  };
-}
-
-buttons.forEach((button, buttonIndex) =>
-  button.addEventListener("click", getSlideButtonListener(buttonIndex))
-);
-
-const mouseMoveListener = (e) => {
+function mouseMoveListener(e) {
   slides.forEach((slide, slideIndex) => {
     dragDelta =
       (e.clientX - dragStartX) / (slide.getBoundingClientRect().width / 100);
@@ -53,7 +34,32 @@ const mouseMoveListener = (e) => {
       slide.style.transform = `translateX(${width}%)`;
     }
   });
-};
+}
+
+function getMouseMoveListenerRemover(slide) {
+  return function removeMouseMoveListener() {
+    slide.removeEventListener("mousemove", mouseMoveListener);
+    if (isMoving) {
+      moveNextSlide();
+      isMoving = false;
+    }
+  };
+}
+
+function setActiveButton(buttonIndex) {
+  lastClickedButton.classList.remove("active");
+  lastClickedButton = buttons[buttonIndex];
+  buttons[buttonIndex].classList.add("active");
+}
+function getSlideButtonListener(buttonIndex) {
+  return () => {
+    setActiveButton(buttonIndex);
+    lastSlide = buttonIndex;
+    slides.forEach((slide, slideIndex) =>
+      move(slide, (slideIndex - buttonIndex) * 100)
+    );
+  };
+}
 
 slides.forEach((slide) => {
   slide.addEventListener("mousedown", (event) => {
@@ -62,6 +68,12 @@ slides.forEach((slide) => {
     slide.addEventListener("mousemove", mouseMoveListener);
   });
 
-  slide.addEventListener("mouseleave", removeMouseMoveListener);
-  slide.addEventListener("mouseup", removeMouseMoveListener);
+  slide.addEventListener("mouseleave", getMouseMoveListenerRemover(slide));
+  slide.addEventListener("mouseup", getMouseMoveListenerRemover(slide));
 });
+
+buttons.forEach((button, buttonIndex) =>
+  button.addEventListener("click", getSlideButtonListener(buttonIndex))
+);
+
+getSlideButtonListener(1)();

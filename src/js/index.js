@@ -2,85 +2,6 @@ const toggle = document.querySelector(".toggle");
 const toggleCross = document.querySelector(".toggle-cross");
 const offCanvas = document.querySelector(".off-canvas");
 const offCanvasCloseButton = document.querySelector(".off-canvas-close");
-const buttons = document.querySelectorAll(".buttons>button");
-const slides = document.querySelectorAll(".testimonial");
-
-let lastClickedButton;
-let lastSlide = 0;
-let dragDelta = 0;
-let isMoving;
-let dragStartX;
-
-function move(slide, translateXPercentage) {
-  slide.style.transform = `translateX(${translateXPercentage}%)`;
-}
-
-const slideButtonClickHandler = (event) => {
-  const button = event.target;
-  lastSlide = button.buttonIndex;
-  if (lastClickedButton) lastClickedButton.classList.remove("active");
-  button.classList.add("active");
-  lastClickedButton = button;
-  slides.forEach((slide, slideIndex) =>
-    move(slide, (slideIndex - button.buttonIndex) * 100)
-  );
-};
-
-function setupTestimonialSlides() {
-  const activeSlideButton = buttons[1];
-  activeSlideButton.buttonIndex = 1;
-  slideButtonClickHandler({ target: activeSlideButton });
-}
-
-buttons.forEach((button, buttonIndex) => {
-  button.buttonIndex = buttonIndex;
-  button.addEventListener("click", slideButtonClickHandler);
-});
-
-const mouseMoveListener = (e) => {
-  slides.forEach((slide, slideIndex) => {
-    dragDelta =
-      (e.clientX - dragStartX) / (slide.getBoundingClientRect().width / 100);
-    console.log("delta ", slide.getBoundingClientRect().width);
-    if (Math.abs(dragDelta) > 10) {
-      const width = (slideIndex - lastSlide) * 100 + dragDelta;
-      slide.style.transform = `translateX(${width}%)`;
-    }
-  });
-};
-function getNextSlide() {
-  if (dragDelta > 10) {
-    return lastSlide - 1 < 0 ? 0 : lastSlide - 1;
-  } else if (dragDelta < -10) {
-    return lastSlide + 1 >= slides.length ? slides.length - 1 : lastSlide + 1;
-  } else return lastSlide;
-}
-
-function moveNextSlide() {
-  const next = getNextSlide();
-  lastSlide = next;
-  slides.forEach((slide, slideIndex) => move(slide, (slideIndex - next) * 100));
-}
-
-function removeMouseMoveListener(e) {
-  console.log(e);
-  if (isMoving) {
-    moveNextSlide();
-    isMoving = false;
-  }
-  e.target.removeEventListener("mousemove", mouseMoveListener);
-}
-
-slides.forEach((slide) => {
-  slide.addEventListener("mousedown", (event) => {
-    dragStartX = event.clientX;
-    isMoving = true;
-    slide.addEventListener("mousemove", mouseMoveListener);
-  });
-
-  slide.addEventListener("mouseleave", removeMouseMoveListener);
-  slide.addEventListener("mouseup", removeMouseMoveListener);
-});
 
 const elements = [toggle, toggleCross, offCanvas];
 
@@ -150,4 +71,3 @@ if (window.addEventListener) {
   addEventListener("scroll", visibilityChangeHandler, false);
   addEventListener("resize", visibilityChangeHandler, false);
 }
-setupTestimonialSlides();

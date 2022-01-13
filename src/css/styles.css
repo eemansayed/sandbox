@@ -617,6 +617,8 @@ body {
   height: 100%;
 }
 .section-testimonials .testimonial {
+  user-select: none;
+  cursor: pointer;
   background-color: #fff;
   position: absolute;
   transition: transform 1s linear;

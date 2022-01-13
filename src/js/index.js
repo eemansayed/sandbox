@@ -3,12 +3,16 @@ const toggleCross = document.querySelector(".toggle-cross");
 const offCanvas = document.querySelector(".off-canvas");
 const offCanvasCloseButton = document.querySelector(".off-canvas-close");
 const buttons = document.querySelectorAll(".buttons>button");
-let lastClickedButton;
-
 const slides = document.querySelectorAll(".testimonial");
 
-function move(slide, slideIndex, buttonIndex) {
-  slide.style.transform = `translateX(${(slideIndex - buttonIndex) * 100}%)`;
+let lastClickedButton;
+let lastSlide = 0;
+let dragDelta = 0;
+let isMoving;
+let dragStartX;
+
+function move(slide, translateXPercentage) {
+  slide.style.transform = `translateX(${translateXPercentage}%)`;
 }
 
 const slideButtonClickHandler = (event) => {
@@ -17,7 +21,7 @@ const slideButtonClickHandler = (event) => {
   button.classList.add("active");
   lastClickedButton = button;
   slides.forEach((slide, slideIndex) =>
-    move(slide, slideIndex, button.buttonIndex)
+    move(slide, (slideIndex - button.buttonIndex) * 100)
   );
 };
 

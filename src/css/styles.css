@@ -558,7 +558,7 @@ body {
 }
 
 .section-testimonials .testimonial-item.content {
-  padding: 3.5rem;
+  padding: 5%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -567,7 +567,6 @@ body {
 }
 
 .section-testimonials .testimonial .quote {
-  margin-top: 25px;
   font-size: 1.1rem;
   line-height: 1.7;
   font-weight: 500;
@@ -575,13 +574,11 @@ body {
 }
 
 .section-testimonials .testimonial .title {
-  margin-top: 25px;
   color: #343f52;
   font-size: 1.1rem;
 }
 
 .section-testimonials .testimonial .profession {
-  margin-top: 10px;
   color: #60697b;
 }
 
@@ -590,20 +587,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 
-.section-testimonials .testimonial-item button {
+.section-testimonials .testimonial-item .btn {
   background-color: transparent;
   border: 4px solid #d4d7dd;
-  margin-right: 10px;
   width: 4px;
   height: 4px;
   cursor: pointer;
   border-radius: 50%;
 }
 
-.section-testimonials .testimonial-item button:hover,
-.section-testimonials .testimonial-item button.active {
+.section-testimonials .testimonial-item .btn:hover,
+.section-testimonials .testimonial-item .btn.active {
   width: 13px;
   height: 13px;
 }
@@ -622,11 +619,19 @@ body {
   height: 100%;
 }
 .section-testimonials .testimonial {
+  padding: 0 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   user-select: none;
   cursor: pointer;
   background-color: #fff;
-  position: absolute;
   transition: transform 1s linear;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .section-work {
@@ -646,6 +651,7 @@ body {
 }
 
 .section-work .headings .title {
+  margin-bottom: 5px;
   letter-spacing: 0.02rem;
   font-size: 0.8rem;
   color: #aab0bc;
@@ -684,6 +690,16 @@ body {
   .header .heading,
   .header p {
     max-width: 60%;
+  }
+  .section-testimonials .container {
+    flex-wrap: wrap;
+  }
+  .section-testimonials .container .testimonial-item {
+    min-height: 450px;
+    flex: 1 1 100%;
+  }
+  .section-testimonials .testimonial {
+    padding: 0 40px;
   }
 }
 

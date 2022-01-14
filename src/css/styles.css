@@ -587,6 +587,9 @@ body {
 
 .section-testimonials .testimonial-item .buttons {
   margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-testimonials .testimonial-item button {

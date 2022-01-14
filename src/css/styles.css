@@ -628,6 +628,58 @@ body {
   position: absolute;
   transition: transform 1s linear;
 }
+
+.section-work {
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.section-work .headings {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-work .headings .title {
+  letter-spacing: 0.02rem;
+  font-size: 0.8rem;
+  color: #aab0bc;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.section-work .headings .sub-title {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  color: #343f52;
+  padding-right: 150px;
+  padding-left: 150px;
+}
+
+.section-work .headings .sub-title .underline {
+  background-image: url("../images/underline.svg");
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+}
+
+.section-work .images {
+  flex: 1 1 40%;
+}
+
+.section-work .images .image img {
+  position: relative;
+  width: 100%;
+  z-index: 1001;
+}
+
 @media (max-width: 1500px) {
   .header .heading,
   .header p {

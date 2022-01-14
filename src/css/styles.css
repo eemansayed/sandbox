@@ -591,16 +591,18 @@ body {
 
 .section-testimonials .testimonial-item button {
   background-color: transparent;
-  border: 1px solid grey;
-  width: 10px;
-  height: 10px;
+  border: 4px solid #d4d7dd;
+  margin-right: 10px;
+  width: 4px;
+  height: 4px;
+  cursor: pointer;
   border-radius: 50%;
 }
 
 .section-testimonials .testimonial-item button:hover,
 .section-testimonials .testimonial-item button.active {
-  width: 20px;
-  height: 20px;
+  width: 13px;
+  height: 13px;
 }
 
 .section-testimonials .outer {

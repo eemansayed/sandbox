@@ -153,7 +153,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.btn {
+.bouncy-button {
   background-color: #fff;
   border-radius: 10px;
   border: none;
@@ -167,7 +167,7 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.btn:hover {
+.bouncy-button:hover {
   outline: none;
   transform: translateY(-3px);
 }
@@ -415,7 +415,7 @@ body {
   color: #374254;
   font-size: 1.7rem;
 }
-.reasons-section .btn {
+.reasons-section .bouncy-button {
   background-color: #e668b3;
 }
 .reasons-section .reason ul {
@@ -557,7 +557,7 @@ body {
   z-index: 1000;
 }
 
-.section-testimonials .testimonial-item.content {
+.section-testimonials .testimonial-item.testimonials-wrapper {
   padding: 5%;
   text-align: center;
   display: flex;
@@ -589,13 +589,13 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-.section-testimonials .testimonials {
+.section-testimonials .inner {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
-.section-testimonials .testimonial {
+.section-testimonials .item {
   padding: 0 10px;
   position: absolute;
   top: 0;
@@ -653,14 +653,59 @@ body {
   background-position-y: 100%;
 }
 
-.section-work .images {
-  flex: 1 1 40%;
+.section-work .images-wrapper img {
+  border-radius: 0.4rem;
+  cursor: pointer;
 }
 
-.section-work .images .image img {
-  position: relative;
-  width: 100%;
-  z-index: 1001;
+.section-work .images-wrapper .btn {
+  position: absolute;
+  right: 600px;
+  bottom: 6.1rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  z-index: 1;
+  background-color: #f9f3f3;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 9px;
+  outline: none;
+}
+
+.section-work .images-wrapper .btn .fas.fa-expand {
+  color: #343f52;
+  font-size: 1rem;
+}
+
+.section-work .images-wrapper .btn:hover {
+  background-color: #fff;
+}
+
+.section-work .images-wrapper .item .info-image {
+  margin-top: 20px;
+}
+
+.section-work .item .info-image .name-image {
+  color: #343f52;
+  line-height: 1.4;
+  font-weight: bold;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.section-work .item .info-image .name-image:hover {
+  color: #a07cc5;
+}
+
+.section-work .item .info-image .category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: #9499a3;
 }
 
 @media (max-width: 1500px) {

@@ -582,29 +582,6 @@ body {
   color: #60697b;
 }
 
-.section-testimonials .testimonial-item .buttons {
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.section-testimonials .testimonial-item .btn {
-  background-color: transparent;
-  border: 4px solid #d4d7dd;
-  width: 4px;
-  height: 4px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.section-testimonials .testimonial-item .btn:hover,
-.section-testimonials .testimonial-item .btn.active {
-  width: 13px;
-  height: 13px;
-}
-
 .section-testimonials .outer {
   width: 100%;
   height: 100%;

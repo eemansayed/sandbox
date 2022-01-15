@@ -87,7 +87,7 @@
         We are a creative company that focuses on long term relationships with
         customers.
       </p>
-      <button class="btn">Read More</button>
+      <button class="bouncy-button">Read More</button>
       <svg
         class="curve"
         xmlns="http://www.w3.org/2000/svg"
@@ -452,10 +452,10 @@
         <div class="testimonial-item">
           <img src="../images/meeting.jpg" alt="" />
         </div>
-        <div class="testimonial-item content">
+        <div class="testimonial-item testimonials-wrapper">
           <div class="outer">
-            <div class="testimonials">
-              <div class="testimonial">
+            <div class="inner">
+              <div class="item">
                 <span class="rating"
                   >&#11088;&#11088;&#11088;&#11088;&#11088;</span
                 >
@@ -469,7 +469,7 @@
                   <p class="profession">Financial Analyst</p>
                 </div>
               </div>
-              <div class="testimonial">
+              <div class="item">
                 <span class="rating"
                   >&#11088;&#11088;&#11088;&#11088;&#11088;</span
                 >
@@ -483,7 +483,7 @@
                   <p class="profession">Marketing Specialist</p>
                 </div>
               </div>
-              <div class="testimonial">
+              <div class="item">
                 <span class="rating"
                   >&#11088;&#11088;&#11088;&#11088;&#11088;</span
                 >
@@ -512,15 +512,20 @@
             <span class="underline">creative</span> ideas and great design.
           </h3>
         </div>
-        <div class="slides-outer">
-          <div class="slides-inner">
-            <div class="slide">
-              <div class="image">
-                <img src="images/clipboard.jpg" alt="" />
-              </div>
-              <div class="info-image">
-                <h2 class="name-image">Cras Fermentum Sem</h2>
-                <h3 class="category">Stationary</h3>
+        <div class="images-wrapper">
+          <div class="outer">
+            <div class="inner">
+              <div class="item">
+                <div class="image">
+                  <img src="images/clipboard.jpg" alt="" />
+                  <button class="btn">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+                <div class="info-image">
+                  <a href="#" class="name-image">Cras Fermentum Sem</a>
+                  <h3 class="category">Stationary</h3>
+                </div>
               </div>
             </div>
           </div>
@@ -533,6 +538,7 @@
     <section class="join"></section>
 
     <footer class="footer"></footer>
+    <script src="js/carousel.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

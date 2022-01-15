@@ -119,7 +119,7 @@ function createSlide(slideContainerName, slidesToShow, overlay = false) {
     slide.addEventListener("mousedown", (event) => {
       dragStartX = event.clientX;
       isMoving = true;
-      slide.addEventListenr("mousemove", mouseMoveListener);
+      slide.addEventListener("mousemove", mouseMoveListener);
     });
 
     slide.addEventListener("mouseleave", getMouseListenerRemover(slide));

@@ -1,84 +1,19 @@
 function createSlide(slideContainerName, slidesToShow, overlay = false) {
-  function addStyle() {
-    const styles = `
-                    ${slideContainerName} .prev:disabled, ${slideContainerName} .next:disabled {color:gray;cursor:none;}
-                    ${slideContainerName} .prev,${slideContainerName} .close-button,${slideContainerName} .next {
-                      position:absolute;
-                      top:50%;
-                      background-color:transparent;
-                      border:none;
-                      padding:5px;
-                      border-radius:50%;
-                      color:#fff;
-                      font-size:3rem;
-                      cursor:pointer;
-                    }
-                    ${slideContainerName} .close-button {top:20px;right:20px;}
-                    ${slideContainerName} .prev {left:20px;}
-                    ${slideContainerName} .next {right:20px;}
-                    ${slideContainerName} .inner {
-                      position: relative;
-                      overflow: hidden;
-                    }
-
-                    ${slideContainerName} .item {
-                      position: absolute;
-                      top: 0;
-                      right: 0;
-                      left: 0;
-                      bottom: 0;
-                      user-select: none;
-                      cursor: pointer;
-                      overflow:hidden;
-                      object-fit:cover;
-                    }
-
-                    ${slideContainerName} .item img {
-                      pointer-events: none;
-                    }
-
-                    ${slideContainerName} .outer{
-                        width:100%;
-                        height:100%;
-                        display:grid;
-                        grid-template-columns:1fr;
-                        grid-template-rows:1fr;
-                    }
-
-                    ${slideContainerName} .btn-wrapper {
-                      min-height:36px;
-                      display:flex;
-                      align-items: center;
-                      justify-content:center;
-                      gap: 10px;
-                    }
-
-                    ${slideContainerName} .btn {
-                      background-color: transparent;
-                      border: 3px solid #d4d7dd;
-                      cursor: pointer;
-                      border-radius: 50%;
-                      padding:3px;
-                      outline:none;
-                    }
-
-                    ${slideContainerName} .btn:hover,.btn.active{
-                      padding:5px;
-                    }
-  `;
-
-    const styleTag = document.createElement("style");
-    styleTag.appendChild(document.createTextNode(styles));
-    document.head.append(styleTag);
-  }
-  addStyle();
-
   const outerWrapper = document.querySelector(slideContainerName);
   const outer = document.querySelector(`${slideContainerName}>.outer`);
+  const inner = document.querySelector(`${slideContainerName}>.outer>.inner`);
   const slides = outer.querySelectorAll(".item");
-
+  window.addEventListener(
+    "load",
+    () => (inner.style.height = slides[0].offsetHeight + "px")
+  );
+  window.addEventListener("resize", () => {
+    inner.style.height = slides[0].offsetHeight + "px";
+  });
   function getButtons() {
-    const buttonWrapper = document.createElement("div");
+    let buttonWrapper = outer.querySelector(".btn-wrapper");
+    if (buttonWrapper) buttonWrapper.remove();
+    buttonWrapper = document.createElement("div");
     buttonWrapper.classList.add("btn-wrapper");
     for (let i = 0, len = slides.length - slidesToShow; i <= len; i++) {
       const btn = document.createElement("button");

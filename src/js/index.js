@@ -71,3 +71,5 @@ if (window.addEventListener) {
   addEventListener("scroll", visibilityChangeHandler, false);
   addEventListener("resize", visibilityChangeHandler, false);
 }
+
+createSlide(".testimonials-wrapper", 1);

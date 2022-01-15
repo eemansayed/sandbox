@@ -73,3 +73,24 @@ if (window.addEventListener) {
 }
 
 createSlide(".testimonials-wrapper", 1);
+let slidesToShow =
+  window.innerWidth < 1000 ? 1 : window.innerWidth < 1500 ? 2 : 3;
+
+createSlide(".images-wrapper", slidesToShow);
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 1000 && slidesToShow !== 1) {
+    slidesToShow = 1;
+    createSlide(".images-wrapper", 1);
+  } else if (
+    window.innerWidth >= 1000 &&
+    window.innerWidth < 1500 &&
+    slidesToShow !== 2
+  ) {
+    slidesToShow = 2;
+    createSlide(".images-wrapper", 2);
+  } else if (window.innerWidth >= 1500 && slidesToShow !== 3) {
+    slidesToShow = 3;
+    createSlide(".images-wrapper", slidesToShow);
+  }
+});

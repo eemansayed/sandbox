@@ -652,18 +652,19 @@ body {
   background-repeat: no-repeat;
   background-position-y: 100%;
 }
-
+.section-work .images-wrapper {
+  width: 100%;
+}
 .section-work .images-wrapper img {
   border-radius: 0.4rem;
-  cursor: pointer;
+  width: 100%;
 }
-
-.section-work .images-wrapper .btn {
+.section-work .image {
+  padding: 12px;
+  position: relative;
+}
+.section-work .images-wrapper .overlay-toggler {
   position: absolute;
-  right: 600px;
-  bottom: 6.1rem;
-  width: 2.2rem;
-  height: 2.2rem;
   z-index: 1;
   background-color: #f9f3f3;
   transition: all 0.3s ease-in-out;
@@ -672,14 +673,18 @@ body {
   border-radius: 50%;
   padding: 9px;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 22px;
+  right: 22px;
 }
 
-.section-work .images-wrapper .btn .fas.fa-expand {
+.section-work .images-wrapper .overlay-toggler .fas.fa-expand {
   color: #343f52;
-  font-size: 1rem;
 }
 
-.section-work .images-wrapper .btn:hover {
+.section-work .images-wrapper .overlay-toggler:hover {
   background-color: #fff;
 }
 
@@ -799,4 +804,82 @@ body {
   .card {
     width: 100%;
   }
+}
+
+.prev:disabled,
+.next:disabled {
+  color: gray;
+  cursor: none;
+}
+.prev,
+.close-button,
+.next {
+  position: absolute;
+  top: 50%;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.close-button {
+  top: 20px;
+  right: 20px;
+}
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+.inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.item img {
+  pointer-events: none;
+}
+
+.outer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.btn-wrapper {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 3px solid #d4d7dd;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 3px;
+  outline: none;
+}
+
+.btn:hover,
+.btn.active {
+  padding: 5px;
 }

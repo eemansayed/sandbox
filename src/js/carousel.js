@@ -5,15 +5,6 @@ function createSlide(slideContainerName, slidesToShow, overlay = false) {
   const slides = outer.querySelectorAll(".item");
   const overlayTogglers = document.querySelectorAll(".overlay-toggler");
 
-  function toggleOverlay() {
-    const overlayWrapper = document.querySelector(".overlay-wrapper");
-    overlayWrapper.style.display = "flex";
-  }
-
-  overlayTogglers.forEach((overlayToggler) => {
-    overlayToggler.addEventListener("click", toggleOverlay);
-  });
-
   function getButtons() {
     let buttonWrapper = outer.querySelector(".btn-wrapper");
     if (buttonWrapper) buttonWrapper.remove();

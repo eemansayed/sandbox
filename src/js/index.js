@@ -3,6 +3,13 @@ const toggleCross = document.querySelector(".toggle-cross");
 const offCanvas = document.querySelector(".off-canvas");
 const offCanvasCloseButton = document.querySelector(".off-canvas-close");
 
+document.querySelectorAll(".overlay-toggler").forEach((overlayToggler) => {
+  overlayToggler.addEventListener(
+    "click",
+    () => (document.querySelector(".overlay-wrapper").style.display = "flex")
+  );
+});
+
 const elements = [toggle, toggleCross, offCanvas];
 
 const toggleVisibility = () => {
@@ -73,6 +80,7 @@ if (window.addEventListener) {
 }
 
 createSlide(".testimonials-wrapper", 1);
+
 let slidesToShow =
   window.innerWidth < 1000 ? 1 : window.innerWidth < 1500 ? 2 : 3;
 
@@ -94,3 +102,5 @@ window.addEventListener("resize", () => {
     createSlide(".images-wrapper", slidesToShow);
   }
 });
+
+createSlide(".overlay-wrapper", 1, true);

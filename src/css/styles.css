@@ -655,16 +655,19 @@ body {
 .section-work .images-wrapper {
   width: 100%;
 }
-.section-work .images-wrapper img {
+.section-work .images-wrapper img,
+.overlay-wrapper img {
   border-radius: 0.4rem;
   width: 100%;
 }
-.section-work .image {
+.section-work .image,
+.overlay-wrapper .image {
   padding: 12px;
   position: relative;
 }
 .section-work .images-wrapper .overlay-toggler {
   position: absolute;
+  opacity: 0;
   z-index: 1;
   background-color: #f9f3f3;
   transition: all 0.3s ease-in-out;
@@ -688,11 +691,19 @@ body {
   background-color: #fff;
 }
 
-.section-work .images-wrapper .item .info-image {
-  margin-top: 20px;
+.section-work .images-wrapper .image:hover .overlay-toggler {
+  opacity: 1;
+  right: 1rem;
 }
 
-.section-work .item .info-image .name-image {
+.section-work .images-wrapper .item .info-image,
+.overlay-wrapper .info-image {
+  margin-top: 20px;
+  padding-left: 12px;
+}
+
+.section-work .item .info-image .name-image,
+.overlay-wrapper .name-image {
   color: #343f52;
   line-height: 1.4;
   font-weight: bold;
@@ -701,11 +712,13 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.section-work .item .info-image .name-image:hover {
+.section-work .item .info-image .name-image:hover,
+.overlay-wrapper .name-image:hover {
   color: #a07cc5;
 }
 
-.section-work .item .info-image .category {
+.section-work .item .info-image .category,
+.overlay-wrapper .category {
   font-size: 0.8rem;
   font-weight: 600;
   margin-top: 10px;
@@ -835,19 +848,16 @@ body {
   right: 20px;
 }
 .inner {
-  position: relative;
   overflow: hidden;
+  display: grid;
 }
 
 .item {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
   user-select: none;
   cursor: pointer;
   overflow: hidden;
   object-fit: cover;
+  grid-area: 1/1/2/2;
 }
 
 .item img {
@@ -882,4 +892,25 @@ body {
 .btn:hover,
 .btn.active {
   padding: 5px;
+}
+
+.overlay-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 10001;
+  padding: 2rem;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(57, 18, 6, 0.8);
+  overflow: hidden;
+}
+.overlay-wrapper .inner {
+  height: max-content;
+}
+.overlay-wrapper .outer {
+  width: 50%;
+  height: 75%;
 }
